@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './WatchList.css'
 const WatchList = ({ tokens, addToken }) => {
   const [token, setToken] = useState('');
 
@@ -19,7 +19,7 @@ const WatchList = ({ tokens, addToken }) => {
         onChange={(e) => setToken(e.target.value)}
         placeholder="Add token address"
       />
-      <button onClick={handleAddToken}>Add</button>
+      <button className='addButton' onClick={handleAddToken}>Add</button>
       <ul>
         {tokens.map((token, index) => (
           <li key={index}>{token}</li>

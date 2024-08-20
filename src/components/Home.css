@@ -1,0 +1,30 @@
+*{
+    background: #000;
+    color: aliceblue;
+}
+.connectWalletBtn {
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input{
+    width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"]:focus {
+    border-color: #10b981;
+  }
+  

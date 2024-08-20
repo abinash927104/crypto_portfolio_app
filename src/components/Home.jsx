@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Home.css'
 import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
 import WatchList from './WatchList';
@@ -7,6 +8,7 @@ import HistoricalData from './HistoricalData';
 import Allowance from './Allowence';
 import TokenTransfer from './TokenTransfer';
 import GetBalance from './GetBalance';
+import Header from './Header';
 
 const Home = () => {
   const [walletAddress, setWalletAddress] = useState('');
@@ -34,7 +36,8 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={connectWallet}>Connect Wallet</button>
+      <Header/>
+      <button className='connectWalletBtn' onClick={connectWallet}>Connect Wallet</button>
       {walletAddress && <p>Connected Wallet: {walletAddress}</p>}
       <WatchList tokens={tokens} addToken={addToken} />
       <input
