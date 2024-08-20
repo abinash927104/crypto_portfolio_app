@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css'
-import detectEthereumProvider from '@metamask/detect-provider';
+//import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
 import WatchList from './WatchList';
 import TokenBalance from './TokenBalance';
@@ -11,16 +11,20 @@ import GetBalance from './GetBalance';
 import Header from './Header';
 
 const Home = () => {
-  const [walletAddress, setWalletAddress] = useState('');
+  const [walletAddress, setWalletAddress] = useState([]);
   const [tokens, setTokens] = useState([]);
   const [spenderAddress, setSpenderAddress] = useState('');
 
   const connectWallet = async () => {
-    const provider = await detectEthereumProvider();
+   // const provider = await detectEthereumProvider();
+   const provider=new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545");
     if (provider) {
-      const web3 = new Web3(provider);
+     // const web3 = new Web3(provider);
+       const web3=new Web3(provider);
       try {
-        const accounts = await web3.eth.requestAccounts();
+       // const accounts = await web3.eth.requestAccounts();
+       const accounts=await web3.eth.getAccounts();
+     //  console.log(accounts);
         setWalletAddress(accounts[0]);
       } catch (error) {
         console.error("User rejected request");
