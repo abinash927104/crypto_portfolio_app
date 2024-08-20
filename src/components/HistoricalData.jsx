@@ -26,7 +26,7 @@ const HistoricalData = ({ token }) => {
     if (startDate && endDate) {
       fetchHistoricalData();
     }
-  }, [startDate, endDate]);
+  });
 
   return (
     <div>
