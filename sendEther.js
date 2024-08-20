@@ -5,8 +5,8 @@ async function sendEther(){
 
     const web3=new Web3(provider);
     const transact= await web3.eth.sendTransaction({
-        from:"0x0a269548267548aa6B1436702a9c2844C54Ee986",
-        to:"0xCE2F53dDD9990280be694f1e3a0D75417401A817",
+        from:"0xA1499a15008a13548f93005BB5c4A8ACAc0fF632",
+        to:"0x55d527Ae9651e17DF98dC18e523dF3473846585C",
         value:web3.utils.toWei("10","ether")
     });
     console.log(transact);

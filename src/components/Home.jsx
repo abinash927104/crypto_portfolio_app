@@ -6,6 +6,7 @@ import TokenBalance from './TokenBalance';
 import HistoricalData from './HistoricalData';
 import Allowance from './Allowence';
 import TokenTransfer from './TokenTransfer';
+import GetBalance from './GetBalance';
 
 const Home = () => {
   const [walletAddress, setWalletAddress] = useState('');
@@ -48,6 +49,7 @@ const Home = () => {
           <HistoricalData token={token} />
           <Allowance token={token} walletAddress={walletAddress} spenderAddress={spenderAddress} />
           <TokenTransfer token={token} walletAddress={walletAddress} />
+          <GetBalance/>
         </div>
       ))}
     </div>
